@@ -1,10 +1,14 @@
 import express from "express";
 const routes = express.Router();
-
-//JWT AUTH
-import jwt from "jsonwebtoken";
+import { verifyJWT } from "./middlewares/auth";
 
 //Controllers
-// import loginController from "./controllers/login"
+import AuthController from "./controllers/auth";
+import CategoryController from "./controllers/category";
+
+routes.post("/auth/register", AuthController.register);
+routes.get("/auth/login", AuthController.login);
+
+routes.get("/category", verifyJWT, CategoryController.list);
 
 export default routes;

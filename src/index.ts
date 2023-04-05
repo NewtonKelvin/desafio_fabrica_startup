@@ -4,6 +4,7 @@ import cors from "cors";
 import routes from "./routes";
 
 import bodyParser from "body-parser";
+import { connectDB } from "./database";
 
 const app = express();
 
@@ -19,5 +20,6 @@ app.use("/", routes);
 //Port
 const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`Server: running on http://192.168.15.81:${PORT}/v1/`);
+  console.log(`Server: running on http://192.168.15.81:${PORT}/`);
+  connectDB();
 });
