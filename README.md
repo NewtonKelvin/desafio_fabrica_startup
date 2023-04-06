@@ -14,7 +14,7 @@ API para gerenciar um cardápio online.
  3. Altere as variáveis de ambiente no arquivo `.env` na raiz do projeto
     1. Troque o valor da variável `IPV4` pelo seu **IPV4 local**
     2. Troque o valor da variável `PORT` por uma porta livre
- 4. Com o terminal aberto na pasta raiz do projeto digite o comando `npm run`
+ 4. Com o terminal aberto na pasta raiz do projeto digite o comando `npm run dev`
  5. Abra o projeto com o link de `Server` disposto no console ao iniciar a aplicação
  6. Abra a documentação com o link de `Swagger` disposto no console ao iniciar a aplicação
  7. Na rota `/auth/login` digite as credenciais login e senha
