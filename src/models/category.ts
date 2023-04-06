@@ -1,15 +1,15 @@
-import mongoose, {
-  InsertManyOptions,
-  MongooseDocumentMiddleware,
-  MongooseError,
-  Schema,
-} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const CategorySchema = new Schema({
   name: {
     type: String,
     required: true,
     unique: true,
+  },
+  parent: {
+    type: String,
+    require: false,
+    default: null,
   },
   createdAt: {
     type: Date,

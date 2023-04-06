@@ -93,7 +93,7 @@ const AuthController = {
             });
           }
         } else {
-          return res.status(400).json({
+          return res.status(404).json({
             error: true,
             message: "User not found",
           });
