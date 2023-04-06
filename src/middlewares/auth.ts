@@ -1,9 +1,11 @@
-import { NextFunction, Request, RequestHandler, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 export function verifyJWT(req: Request, res: Response, next: NextFunction) {
-  const token = req.headers["authorization"] as string;
+  let token = req.headers["authorization"] as string;
+  token = token.startsWith("Bearer ") ? token.replace("Bearer ", "") : token;
 
   if (!token) {
     return res.json({
@@ -13,7 +15,7 @@ export function verifyJWT(req: Request, res: Response, next: NextFunction) {
     });
   }
 
-  jwt.verify(token, process.env.SECRET || "secret", function (err, decoded) {
+  jwt.verify(token, process.env.SECRET || "secret", function (err) {
     if (err) {
       return res.status(401).json({
         error: true,

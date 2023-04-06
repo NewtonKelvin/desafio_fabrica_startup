@@ -6,7 +6,7 @@ import { DatabaseId, ProductType } from "../types";
 const ProductController = {
   async list(req: Request, res: Response) {
     Product.find()
-      .select(["_id", "name", "price", "qty"])
+      .select(["_id", "name", "price", "qty", "categories"])
       .then((product) => {
         if (product) {
           return res.status(200).json({
@@ -107,6 +107,7 @@ const ProductController = {
     }
 
     Product.findById(id)
+      .select(["_id", "name", "price", "qty", "categories"])
       .then((product) => {
         if (product) {
           return res.status(200).json({
@@ -163,7 +164,13 @@ const ProductController = {
       });
     }
 
-    Product.findOneAndUpdate({ _id: id }, { categories, name, qty, price })
+    Product.findOneAndUpdate(
+      { _id: id },
+      { categories, name, qty, price },
+      {
+        returnOriginal: false,
+      },
+    )
       .then((product) => {
         if (product) {
           return res.status(200).json({

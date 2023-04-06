@@ -20,5 +20,6 @@ const PORT = process.env.PORT || 3001;
 const IPV4 = process.env.IPV4 || "192.168.15.81";
 app.listen(PORT, () => {
   console.log(`Server: running on http://${IPV4}:${PORT}/`);
+  console.log(`Swagger: running on http://${IPV4}:${PORT}/api-docs`);
   connectDB();
 });

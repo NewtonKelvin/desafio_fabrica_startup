@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 // Replace the uri string with your connection string.
 const user = process.env.CLUSTER_USER;

@@ -1,19 +1,33 @@
 # **Desafio de Node.JS**
 
-Desafio - *Fábrica de Startup*:
+## Desafio - Fábrica de Startup:
 API para gerenciar um cardápio online.
 
-> Observação: Altere o arquivo **.env** com as credenciais do MongoDB
-> 
-> Observação: Altere o arquivo **.env** com seu IP e PORTA
-
 ## Como configurar o ambiente
- 1. X
- 2. X
- 3. X
- 4. X
- 5. X
- 6. X
+> Obs.: Certifique-se de ter o **Node** e **npm** instalado em seu computador
+
+> Login: `recrutador`
+> Password: `123456`
+
+
+ 1. Clone o repositório em seu computador
+ 2. Execute o comando `npm install`
+ 3. Altere as variáveis de ambiente no arquivo `.env` na raiz do projeto
+    1. Troque o valor da variável `IPV4` pelo seu **IPV4 local**
+    2. Troque o valor da variável `PORT` por uma porta livre
+ 4. Com o terminal aberto na pasta raiz do projeto digite o comando `npm run`
+ 5. Abra o projeto com o link de `Server` disposto no console ao iniciar a aplicação
+ 6. Abra a documentação com o link de `Swagger` disposto no console ao iniciar a aplicação
+ 7. Na rota `/auth/login` digite as credenciais login e senha
+ 8. Cole o Token JWT na Autenticação do Swagger e pronto, você já pode testar as API's!
+
+## Comandos / Atalhos
+
+- `npm install` instala todas as dependências
+- `npm run dev` roda o servidor node para utilizar o projeto
+- `rs` reinicia o servidor node já em execução
+- `ctrl + c` finaliza o servidor node em execução
+- `npx eslint src/**` roda o eslint que faz uma varredura por erros e pontos de atenção no código
 
 ## Tecnologias / Frameworks / Bibliotecas
 
@@ -27,4 +41,5 @@ API para gerenciar um cardápio online.
 - **dotenv:** Biblioteca que carrega as variáveis de ambiente do arquivo .env facilitando o uso de variáveis globais
 - **jsonwebtoken:** Biblioteca para criação de uma assinatura usada para autenticar o usuário
 - **mongoose:** Biblioteca para conexão com o banco de dados MongoDB
+- **@types/...:** Tipagem das bibliotecas para suporte ao typescript
 - **nodemon:** Dependência que monitora o código e reinicia o servidor node após alguma alteração no código

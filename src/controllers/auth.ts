@@ -4,11 +4,12 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { LoginType } from "../types";
 
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 const AuthController = {
   async login(req: Request, res: Response) {
-    const { login, password } = req.body as LoginType;
+    const { login, password } = req.query as LoginType;
     if (!login || login === null || typeof login === undefined) {
       return res.status(400).json({
         error: true,
