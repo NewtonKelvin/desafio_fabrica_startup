@@ -8,15 +8,14 @@ import CategoryController from "./controllers/category";
 import ProductController from "./controllers/product";
 
 //Routes
-routes.post("/auth/register", AuthController.register);
-routes.get("/auth/login", AuthController.login);
+routes.get("/auth/login", AuthController.login); // login
 
-routes.get("/category", verifyJWT, CategoryController.list);
+routes.get("/category", verifyJWT, CategoryController.list); // categories list
 
-routes.get("/product", verifyJWT, ProductController.list);
-routes.post("/product", verifyJWT, ProductController.create);
-routes.get("/product/:id", verifyJWT, ProductController.get);
-routes.patch("/product/:id", verifyJWT, ProductController.update);
-routes.delete("/product/:id", verifyJWT, ProductController.delete);
+routes.get("/product", verifyJWT, ProductController.list); // products list
+routes.post("/product", verifyJWT, ProductController.create); //products create
+routes.get("/product/:id", verifyJWT, ProductController.get); // get product by id
+routes.patch("/product/:id", verifyJWT, ProductController.update); // update product by id
+routes.delete("/product/:id", verifyJWT, ProductController.delete); // delete product by id
 
 export default routes;

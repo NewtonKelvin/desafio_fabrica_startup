@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import Product from "../models/product";
 import Category from "../models/category";
+import { DatabaseId, ProductType } from "../types";
 
 const ProductController = {
   async list(req: Request, res: Response) {
@@ -27,7 +28,7 @@ const ProductController = {
       });
   },
   async create(req: Request, res: Response) {
-    const { categories, name, qty, price } = req.body;
+    const { categories, name, qty, price } = req.body as ProductType;
 
     if (
       !categories ||
@@ -96,7 +97,7 @@ const ProductController = {
       });
   },
   async get(req: Request, res: Response) {
-    const { id } = req.params;
+    const { id } = req.params as DatabaseId;
 
     if (!id || id === null || typeof id === undefined) {
       return res.status(400).json({
@@ -128,8 +129,8 @@ const ProductController = {
   },
 
   async update(req: Request, res: Response) {
-    const { id } = req.params;
-    const { categories, name, qty, price } = req.body;
+    const { id } = req.params as DatabaseId;
+    const { categories, name, qty, price } = req.body as ProductType;
 
     if (!id || id === null || typeof id === undefined) {
       return res.status(400).json({
@@ -186,7 +187,7 @@ const ProductController = {
   },
 
   async delete(req: Request, res: Response) {
-    const { id } = req.params;
+    const { id } = req.params as DatabaseId;
 
     if (!id || id === null || typeof id === undefined) {
       return res.status(400).json({

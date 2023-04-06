@@ -1,4 +1,15 @@
 export type LoginType = {
-  login: String;
-  password: String;
+  login: string;
+  password: string;
+};
+
+export type ProductType = {
+  name: string;
+  qty: number;
+  price: number;
+  categories: string[];
+};
+
+export type DatabaseId = {
+  id: string;
 };

@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 require("dotenv").config();
 
 export function verifyJWT(req: Request, res: Response, next: NextFunction) {
-  const token = req.headers["authorization"];
+  const token = req.headers["authorization"] as string;
 
   if (!token) {
     return res.json({

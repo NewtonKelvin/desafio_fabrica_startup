@@ -15,11 +15,10 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use("/", routes);
 
-//Database
-
 //Port
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+const IPV4 = process.env.IPV4 || "192.168.15.81";
 app.listen(PORT, () => {
-  console.log(`Server: running on http://192.168.15.81:${PORT}/`);
+  console.log(`Server: running on http://${IPV4}:${PORT}/`);
   connectDB();
 });
