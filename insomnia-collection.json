@@ -1,0 +1,347 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-04-06T07:29:17.728Z",
+  "__export_source": "insomnia.desktop.app:v2023.1.0",
+  "resources": [
+    {
+      "_id": "req_a72530343006426a8d360462de671d27",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680747285271,
+      "created": 1680747279425,
+      "url": "{{ _.base_url }}/product/642e18664831e8ff2b1acaad",
+      "name": "product delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+        "mimeType": "application/json",
+        "text": ""
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_cd957263b1d04051ab792856d72a988a",
+          "name": "authorization",
+          "value": "{{ _.token }}",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680675951695.9229,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "parentId": null,
+      "modified": 1680657463921,
+      "created": 1680657463921,
+      "name": "desafio_fabrica_startup",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_24b9529f88cc4fbab342f5a2fe16d6ef",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680763995062,
+      "created": 1680746327104,
+      "url": "{{ _.base_url }}/product/642e2538ee3e4b3f5399cc81",
+      "name": "product update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Suco de Laranja\",\n\t\"qty\": 9,\n\t\"price\": 7.99,\n\t\"categories\": [\"Bebidas\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_cd957263b1d04051ab792856d72a988a",
+          "name": "authorization",
+          "value": "{{ _.token }}",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680675900840.355,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2c96ba348f9046c986d3b7d3eff35a53",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680764784389,
+      "created": 1680745840304,
+      "url": "{{ _.base_url }}/product/642e6f5a6ad3e90ac48f1cba",
+      "name": "product id",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": ""
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_cd957263b1d04051ab792856d72a988a",
+          "name": "authorization",
+          "value": "{{ _.token }}",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680675849984.787,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ebf52f570a064fe8a9b6953637fe9e5a",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680764760627,
+      "created": 1680741362676,
+      "url": "{{ _.base_url }}/product",
+      "name": "product",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Bolo de chocolate no pote\",\n\t\"qty\": 22,\n\t\"price\": 12.80,\n\t\"categories\": [\"Sobremesas\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_cd957263b1d04051ab792856d72a988a",
+          "name": "authorization",
+          "value": "{{ _.token }}",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680675646562.5156,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6f49e71ce93e447dbe5b3c41e531adbd",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680755912441,
+      "created": 1680741480914,
+      "url": "{{ _.base_url }}/product",
+      "name": "products",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_cd957263b1d04051ab792856d72a988a",
+          "name": "authorization",
+          "value": "{{ _.token }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680675104103.125,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d995748cef9e43f795a2b9ab2bd7a347",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680741574392,
+      "created": 1680678479406,
+      "url": "{{ _.base_url }}/category",
+      "name": "categories",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_cd957263b1d04051ab792856d72a988a",
+          "name": "authorization",
+          "value": "{{ _.token }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680673657544.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_288745237f3344da958bc2a2c26ae851",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680765024435,
+      "created": 1680670764428,
+      "url": "{{ _.base_url }}/auth/login",
+      "name": "login",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"login\": \"recrutador\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [
+        {
+          "id": "pair_a5f1077d567548609ce650b5b1885025",
+          "name": "login",
+          "value": "kelvin.newton",
+          "description": ""
+        },
+        {
+          "id": "pair_31d5dbaf817f4d69870d69d570bc0a64",
+          "name": "password",
+          "value": "123456",
+          "description": ""
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680670764428,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_49c060e391094687b6554005cca257f5",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680672800849,
+      "created": 1680657471185,
+      "url": "{{ _.base_url }}/auth/register",
+      "name": "register",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"login\": \"kelvin.newton\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_127828281bbd413c82a47eb4f0108b6e",
+          "name": "",
+          "value": "",
+          "description": ""
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1680657471185,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_89b1e6549cb6056ee134ef77a540ff7fc224354f",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680674780740,
+      "created": 1680657463925,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://192.168.15.81:3001",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SUQiOiI2NDJkMDgyMTdhZmI5OTUyNjZkNzM0ZTAiLCJpYXQiOjE2ODA2NzQ2Nzh9.Q8xm8sh3l-eNEHJl5v5VQstNI3kfc852Alsfa6i4WIw"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "token"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1680657463925,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_89b1e6549cb6056ee134ef77a540ff7fc224354f",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680657463927,
+      "created": 1680657463927,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_6498339ecf6a4c0b9864936e6c8d74d3",
+      "parentId": "wrk_d9ef6234084d40f582d007d6e2661010",
+      "modified": 1680657463921,
+      "created": 1680657463921,
+      "fileName": "desafio_fabrica_startup",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}

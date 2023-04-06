@@ -20,6 +20,8 @@ API para gerenciar um cardápio online.
  7. Na rota `/auth/login` digite as credenciais login e senha
  8. Cole o Token JWT na Autenticação do Swagger e pronto, você já pode testar as API's!
 
+> Também deixei uma collection do insomnia na raiz do projeto se não optar pelo swagger para consumir as API's
+
 ## Comandos / Atalhos
 
 - `npm install` instala todas as dependências
