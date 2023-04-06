@@ -6,8 +6,7 @@ API para gerenciar um cardápio online.
 ## Como configurar o ambiente
 > Obs.: Certifique-se de ter o **Node** e **npm** instalado em seu computador
 
-> Login: `recrutador`
-> Password: `123456`
+> Dados de autenticação: Login: `recrutador` Password: `123456`
 
 
  1. Clone o repositório em seu computador
